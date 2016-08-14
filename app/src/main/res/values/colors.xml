@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#93c250</color>
+    <color name="colorPrimaryDark">#0e4f09</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="darkBG">#423752</color>
+    <color name="lightBG">#fff</color>
+    <color name="white">#fff</color>
+    <color name="red">#f1613e</color>
+    <color name="orange">#ff6f00</color>
+    <color name="light_ntb_bg">#4b405c</color>
+    <color name="green_ntb_bg">#93c250</color>
+    <color name="text_gray">#c6cdcd</color>
+    <color name="text_dark">#989c9c</color>
+    <color name="ligt_gray_background">#d4d7d7</color>
+
     <!-- Colors for Calendar view -->
     <color name="calendar_future_days_bg">#FFFFFF</color>
     <color name="calendar_past_days_bg">#F5F5F5</color>
@@ -18,7 +33,7 @@
     <color name="agenda_list_header_divider">#E4E4E4</color>
 
     <!-- General -->
-    <color name="blue_selected">#1D87E7</color>
+    <color name="blue_selected">#1d87e7</color>
     <color name="theme_primary_dark">#1976D2</color>
     <color name="theme_primary">#2196F3</color>
     <color name="theme_light_primary">#BBDEFB</color>

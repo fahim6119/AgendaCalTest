@@ -1,0 +1,4 @@
+To add auto email : 
+
+Add 3 jars to project using dependenices, place them in the app/libs folder
+Add this line to manifest : <uses-permission android:name="android.permission.INTERNET" />

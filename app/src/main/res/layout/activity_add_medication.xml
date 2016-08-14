@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addMedicationLayout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context="batfia.agendacaltest.medication.AddMedicationActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addMedicationTopBarLayout"
+        android:baselineAligned="false">
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMedicationCancel"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:text="Add Medication"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:id="@+id/addMedicationTopView"
+            android:layout_weight="0.34"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue_selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addMedicationInfoLayout"
+        android:weightSum="11">
+
+        <TextView
+            android:text="Info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMedicationInfoHeader"
+            android:gravity="bottom"
+            android:layout_weight="0.5"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/addMedicationName"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Shape"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/addMedicationShape"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_detail_row"
+            android:text="Dosage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/addMedicationDosage"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Details"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/addMedicationDetails"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+
+        <TextView
+            android:text="Add Companion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMedicationBuddyHeader"
+            android:gravity="bottom"
+            android:layout_weight="0.5"/>
+
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Details"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/addMedicationCompanion"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+
+        <TextView
+            android:text="Reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMedicationReminderHeader"
+            android:gravity="bottom"
+            android:layout_weight="0.5"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:id="@+id/addMedicationAlarmOffLayout"
+            android:gravity="center_vertical">
+
+
+            <android.support.v7.widget.SwitchCompat
+                android:checked="true"
+                android:text="Turn reminders off to take this med as you need"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch1"
+                android:background="@android:color/transparent"
+                android:theme="@style/MySwitch"
+                android:layout_weight="1"
+                android:textColor="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Daily or weekly"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/addMedicationFrequencyDays"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_row"
+            android:text="Dosage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/addMedicationDailyDosage"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+
+        <include
+            layout="@layout/activity_add_medication_detail_row"
+            android:text="Time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/addMedicationTime"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+        <View style="@style/Divider"
+            android:layout_weight="0.05"/>
+    </LinearLayout>
+
+</LinearLayout>

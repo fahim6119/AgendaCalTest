@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_medication"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="batfia.agendacaltest.medication.MedicationDetailsActivity">
+
+    <TextView
+        android:text="Medication Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/medicationText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <Button
+        android:text="Add Comapnion"
+        android:paddingRight="@dimen/button_padding_right"
+        android:paddingLeft="@dimen/button_padding_left"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="addCompanion"
+        android:id="@+id/companionBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_main" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/medicationLabel"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/medicationText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Paracetamol Tablet, \n Syrup, Suppository, Suspension, Drops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/medicationDetail"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/medicationName"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/medicationFrequencySpinner"
+        android:layout_below="@+id/medicationState"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="NAPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:id="@+id/medicationName"
+        android:textColor="@color/blue_dark"
+        android:layout_below="@+id/medicationLabel"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/medicationState"
+        android:layout_below="@+id/medicationDetail"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/medicationFrequencySpinner"
+        android:layout_above="@id/companionBtn">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/medicationTimes"/>
+    </ScrollView>
+</RelativeLayout>

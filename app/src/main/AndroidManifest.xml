@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="batfia.agendacaltest">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -15,7 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".CardViewActivity" />
+        <activity android:name=".medication.MedicationDetailsActivity" />
+        <activity android:name=".medication.MedicationListActivity" />
+        <activity android:name=".medication.AddMedicationActivity"></activity>
     </application>
 
 </manifest>
